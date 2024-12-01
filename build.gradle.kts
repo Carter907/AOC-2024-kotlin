@@ -1,6 +1,9 @@
 plugins {
     kotlin("jvm") version "2.1.0"
 }
+dependencies {
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+}
 
 sourceSets {
     main {
