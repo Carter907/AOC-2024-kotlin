@@ -1,9 +1,8 @@
 fun main() {
     fun part1(input: List<String>): Int {
 
-        var (first, last) = input.map { it.split(" ").first()
-            .toInt() to it.split(" ").last()
-                .toInt()
+        val (first, last) = input.map {
+                it.substringBefore(" ").toInt() to it.substringAfterLast(" ").toInt()
         }.unzip()
 
         val totalDistance = first.sorted()
