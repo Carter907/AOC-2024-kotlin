@@ -9,25 +9,25 @@ fun main() {
 
                     // NorthEast
                     if (j < mat[i].size - 3 && i > 2) {
-                        if (mat[i-1][j+1] == 'M' && mat[i-2][j+2] == 'A' && mat[i-3][j+3] == 'S') {
+                        if (mat[i - 1][j + 1] == 'M' && mat[i - 2][j + 2] == 'A' && mat[i - 3][j + 3] == 'S') {
                             count++
                         }
                     }
                     // NorthWest
                     if (j > 2 && i > 2) {
-                        if (mat[i-1][j-1] == 'M' && mat[i-2][j-2] == 'A' && mat[i-3][j-3] == 'S') {
+                        if (mat[i - 1][j - 1] == 'M' && mat[i - 2][j - 2] == 'A' && mat[i - 3][j - 3] == 'S') {
                             count++
                         }
                     }
                     // SouthEast
-                    if (j < mat[i].size-3 && i < mat.size - 3) {
-                        if (mat[i+1][j+1] == 'M' && mat[i+2][j+2] == 'A' && mat[i+3][j+3] == 'S') {
+                    if (j < mat[i].size - 3 && i < mat.size - 3) {
+                        if (mat[i + 1][j + 1] == 'M' && mat[i + 2][j + 2] == 'A' && mat[i + 3][j + 3] == 'S') {
                             count++
                         }
                     }
                     // SouthWest
                     if (j > 2 && i < mat.size - 3) {
-                        if (mat[i+1][j-1] == 'M' && mat[i+2][j-2] == 'A' && mat[i+3][j-3] == 'S') {
+                        if (mat[i + 1][j - 1] == 'M' && mat[i + 2][j - 2] == 'A' && mat[i + 3][j - 3] == 'S') {
                             count++
                         }
                     }
@@ -50,19 +50,19 @@ fun main() {
                 if (mat[i][j] == 'A') {
                     if (i < mat.size - 1 && i > 0 && j > 0 && j < mat[i].size - 1) {
                         // both forwards
-                        if (mat[i-1][j-1] == 'M' && mat[i+1][j+1] == 'S' && mat[i+1][j-1] == 'M' && mat[i-1][j+1] == 'S') {
+                        if (mat[i - 1][j - 1] == 'M' && mat[i + 1][j + 1] == 'S' && mat[i + 1][j - 1] == 'M' && mat[i - 1][j + 1] == 'S') {
                             count++
                         }
                         // both backwards
-                        else if (mat[i-1][j-1] == 'S' && mat[i+1][j+1] == 'M' && mat[i+1][j-1] == 'S' && mat[i-1][j+1] == 'M') {
+                        else if (mat[i - 1][j - 1] == 'S' && mat[i + 1][j + 1] == 'M' && mat[i + 1][j - 1] == 'S' && mat[i - 1][j + 1] == 'M') {
                             count++
                         }
                         // first forward second backward
-                        else if (mat[i-1][j-1] == 'M' && mat[i+1][j+1] == 'S' && mat[i+1][j-1] == 'S' && mat[i-1][j+1] == 'M') {
+                        else if (mat[i - 1][j - 1] == 'M' && mat[i + 1][j + 1] == 'S' && mat[i + 1][j - 1] == 'S' && mat[i - 1][j + 1] == 'M') {
                             count++
                         }
                         // first backward second forward
-                        else if (mat[i-1][j-1] == 'S' && mat[i+1][j+1] == 'M' && mat[i+1][j-1] == 'M' && mat[i-1][j+1] == 'S') {
+                        else if (mat[i - 1][j - 1] == 'S' && mat[i + 1][j + 1] == 'M' && mat[i + 1][j - 1] == 'M' && mat[i - 1][j + 1] == 'S') {
                             count++
                         }
                     }
